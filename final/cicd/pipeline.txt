@@ -1,0 +1,29 @@
+1.Sign into the Microsoft Azure portal.
+
+2.In the search box, type Devops and then select DevOps Starter. Then click on Create Devops Starter
+3.By default DevOps Starter project setup with GitHub. Click on change settings here to change the destination to Azure DevOps and click Done
+4.Now select the .NET sample application and click Next.
+5.The .NET samples include a choice of either the open source ASP.NET framework or the cross-platform .NET Core framework. Select the .NET Core application framework. 
+6.This sample is an ASP.NET Core MVC application and also enable Add a database toggle to add the database to the application choose Next.
+7.Web App on Windows is the default deployment target. You can optionally choose Virtual Machine also done choose Next.
+8.Select your Azure DevOps organization and choose a name for your project and Web app. When you’re done, choose Review + Create.
+9.You can click on Additional Settings if you would like to edit web app and database parameters
+10.Once the deployment completes, click Go to resource.
+11.DevOps project
+   Created a team project with sample .NET code repository
+   Created a build and release pipelines to compile, test and deploy the application
+   Created Azure Web App and Azure SQL database in Azure using Azure Pipelines
+   If Azure Resources are not created, they will be created by CI/CD pipeline. You can track pipeline status in ‘CI/CD pipeline’ section
+
+Ci/Cd pipeline:
+Select Build Pipelines from the top of the Azure DevOps project dashboard. This link opens a browser tab and the Azure DevOps build pipeline for your new project.
+Select Edit.
+In this pane, you can examine the various tasks for your build pipeline. This build pipeline performs various tasks such as fetching sources from the Git repository, restoring dependencies, compile the application, run tests and publishing outputs used for deployments.
+Under your build pipeline name, select History. You see an audit trail of your recent changes for the build. Azure DevOps keeps track of any changes made to the build definition and allows you to compare versions.
+Select Triggers. The Azure DevOps project automatically created a CI trigger and every commit to the repository initiates a new build. You can optionally choose to include or exclude branches from the CI process.
+Select Releases under Pipelines section.
+Select the release pipeline, then choose Edit.
+Under Artifacts, select Drop. The build pipeline you examined in the previous steps produces the output used for the artifact.
+To the right-hand side of the Drop icon, select the Continuous deployment trigger. This release pipeline has an enabled CD trigger, which executes a deployment every time there is a new build artifact available. Optionally, you can disable the trigger, when your deployments require manual execution.
+Select Tasks. The tasks are the activities your deployment process performs. In this example, you have five tasks.
+
